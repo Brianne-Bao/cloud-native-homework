@@ -1,0 +1,5 @@
+# 这里是gitignore文件，其实现在我们还用不到，就先放着了
+
+codes/UserService/target/
+.idea
+*.iml

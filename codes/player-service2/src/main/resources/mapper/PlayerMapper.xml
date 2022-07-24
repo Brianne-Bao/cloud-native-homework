@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.nju.playerservice.dao.PlayerDao">
+    <select id="getPlayer" resultType="edu.nju.playerservice.model.Player">
+        select * from cloud.player
+        where id = #{id}
+    </select>
+
+    <insert id="addPlayer" parameterType="edu.nju.playerservice.model.Player">
+        insert into cloud.player(id,name,position,number)
+        values( #{id}, #{name}, #{position}, #{number})
+    </insert>
+
+
+    <resultMap id="Player" type="edu.nju.playerservice.model.Player">
+        <id column="id" property="id"></id>
+        <result column="name" property="name" ></result>
+        <result column="position" property="position"></result>
+        <result column="number" property="number" ></result>
+    </resultMap>
+</mapper>

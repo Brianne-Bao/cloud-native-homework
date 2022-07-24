@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: admin-service
+
+server:
+  port: 8090
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-service:8085/eureka/
